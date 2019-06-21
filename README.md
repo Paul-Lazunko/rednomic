@@ -31,7 +31,7 @@ app.get('/config/', (req, res, next) => {
 });
 
 app.listen(3000, () => {
-  console.log( `API server was started at #${3000} port` );
+  console.log( `API server was started at 3000 port` );
 });
 
 ```
