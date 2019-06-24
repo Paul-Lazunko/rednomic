@@ -18,6 +18,7 @@ const RS = new RednomicServer({
     port: 6379
   },
   timeout: 10000,
+  streamsMaxAge: 86400,
   resolve: (res, data) => {
     res.status(200).send(data)
   },
