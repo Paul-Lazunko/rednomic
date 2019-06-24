@@ -27,7 +27,7 @@ const RS = new RednomicServer({
 });
 
 app.get('/config/', (req, res, next) => {
-  RS.add('config', {}, res);
+  RS.use('config', {}, req, res);
 });
 
 app.listen(3000, () => {
