@@ -41,7 +41,7 @@ Write Your first microservice using rednomic (service1.js):
 ```
 import { RednomicUnit } from 'rednomic';
 
-return new RednomicUnit({
+let a = new RednomicUnit({
   server: {
     host: '127.0.0.1',
     port: 6379
@@ -59,7 +59,7 @@ return new RednomicUnit({
 and second microservice which will be requested by previous one (service2.js):
 
 ```
-return new RednomicUnit({
+let b = new RednomicUnit({
   server: {
     host: '127.0.0.1',
     port: 6379
