@@ -1,6 +1,6 @@
 {
   "name": "rednomic",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Redis based Node.js microservices framework",
   "main": "index.js",
   "directories": {
@@ -27,7 +27,7 @@
   "homepage": "https://github.com/Paul-Lazunko/rednomic#readme",
   "dependencies": {
     "node-macaddress": "^0.2.4",
-    "nodejs-redis-observer": "^1.0.9"
+    "nodejs-redis-observer": "^1.0.10"
   },
   "devDependencies": {
     "husky": "1.1.2",
