@@ -2,9 +2,9 @@
 
 Install **rednomic** package using yarn or npm:
 
-``` yarn add rednomic ```
+`yarn add rednomic`
 
-There is a simple example of http-server (which is entry point to Your microservices system) part of code (make sure that Redis server is running) in the server.js or another file:
+There is a simple example of http-server (which is entry point to Your microservices system) part of code (make sure that Redis server is running, use esm module for supporting es import) in the server.js or another file:
 
 ```
 import express from 'express';
@@ -27,14 +27,19 @@ const RS = new RednomicServer({
   }
 });
 
-app.get('/config/', (req, res, next) => {
-  RS.use('config', {}, req, res);
+app.get('/config/',
+  (req, res, next) => {
+  // pass needed unitId as the first and needed data as second arguments
+    RS.use('config', {}, req, next);
+  },
+  (req, res) => {
+  // req.rednomic = { successResult, errorResult };
+    res.status(200).send(JSON.stringify(req.rednomic));
 });
 
 app.listen(3000, () => {
   console.log( `API server was started at 3000 port` );
 });
-
 ```
 
 Write Your first microservice using rednomic (service1.js):
@@ -54,7 +59,6 @@ let a = new RednomicUnit({
     return await this.call('config2', data);
   }
 });
-
 ```
 
 and second microservice which will be requested by previous one (service2.js):
@@ -72,8 +76,8 @@ let b = new RednomicUnit({
     return { success: true };
   }
 });
+```
 
-``` 
 run Your microservices and http-server as separate processes:
 
 **server.js:**
