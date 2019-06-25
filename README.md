@@ -17,14 +17,7 @@ const RS = new RednomicServer({
     host: '127.0.0.1',
     port: 6379
   },
-  timeout: 10000,
-  streamsMaxAge: 86400,
-  resolve: (res, data) => {
-    res.status(200).send(data)
-  },
-  reject: (res, data) => {
-    res.status(400).send(data)
-  }
+  timeout: 10000
 });
 
 app.get('/config/',
