@@ -28,7 +28,6 @@
   "dependencies": {
     "macaddress": "^0.2.9",
     "nodejs-redis-observer": "^1.0.13",
-    "os": "^0.1.1",
     "stream-array": "^1.1.2"
   },
   "devDependencies": {
