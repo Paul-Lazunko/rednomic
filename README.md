@@ -205,10 +205,13 @@ const RS = new RednomicServer({
   timeout: 10000
 });
 
-app.post('/file/', RednomicUpload, (req, res, next) => {
+app.post('/file/',
+  RednomicUpload,
+  (req, res, next) => {
   RS.use('F', {}, req, next);
-}, (req, res, next) => {
-  res.status(200).send(JSON.stringify(req.rednomic))
+  },
+  (req, res, next) => {
+  res.status(200).send(JSON.stringify(req.rednomic));
 });
 
 app.listen(3000, () => {
@@ -230,7 +233,7 @@ let f = new RednomicUnit({
   unitId: 'F',
   timeout: 10000,
   service: async function (data) {
-    console.log('microservice A was called ', +new Date());
+    console.log('microservice F was called ', +new Date());
     let files = [], error;
     this.files.map(file => {
       let path = `${__dirname}/uploads/${file.filename}`;
