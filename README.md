@@ -150,7 +150,10 @@ let g = new RednomicUnitGroup({
     port: 6379
   },
   unitId: 'Group',
-  units: ['A', 'B'],
+  units: [
+    { unitId: 'A' },
+    { unitId: 'B' }
+  ],
   timeout: 10000
 });
 ```
@@ -208,10 +211,10 @@ const RS = new RednomicServer({
 app.post('/file/',
   RednomicUpload,
   (req, res, next) => {
-  RS.use('F', {}, req, next);
+    RS.use('F', {}, req, next);
   },
   (req, res, next) => {
-  res.status(200).send(JSON.stringify(req.rednomic));
+    res.status(200).send(JSON.stringify(req.rednomic));
 });
 
 app.listen(3000, () => {
