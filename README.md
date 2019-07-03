@@ -1,6 +1,6 @@
 #Rednomic
 
-Rednomic is a framework for developing microservice systems, the main feature of which is the asynchronous interaction of components through Redis. Data is transmitted as a JSON strings, file streaming throw Redis is implemented also.
+Rednomic is a framework for developing microservices based systems, the main feature of it is the asynchronous interaction of components through Redis. Data is transmitted as a JSON strings, file streaming from entry point to microservice is implemented throw Redis also.
 
 ##Units
 
@@ -14,9 +14,9 @@ Each microservice in your system is a separate executable unit (it can be a dock
 
 The following methods and properties are available for calling inside the **service**:
 
-- call: asynchronous function for interaction with another units, which takes two arguments (unitId and data);
-- log: function which write logs, takes two arguments (type - 'info' or error' and data);
-- files: holder of binary data passed from API Gateaway;
+- **call**: asynchronous function for interaction with another units, which takes two arguments (unitId and data);
+- **log**: function which write logs, takes two arguments (type - 'info' or error' and data);
+- **files**: holder of binary data passed from API Gateaway;
 
 (see below usage examples);
 
