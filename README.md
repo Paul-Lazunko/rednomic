@@ -2,6 +2,10 @@
 
 Rednomic is a framework for developing microservices based systems, the main feature of it is the asynchronous interaction of components through Redis. Data is transmitted as a JSON strings, file streaming from entry point to microservice is implemented throw Redis also.
 
+Clone and test example app:
+
+https://github.com/Paul-Lazunko/rednomic_docker_example
+
 ##Units
 
 Each microservice in your system is a separate executable unit (it can be a docker container or a process running on the same with entry point or another server) that interacts with the entry point or other microservices through Redis. In Your code unit is the instance of RednomicUnit class and requires next options to be provided:
