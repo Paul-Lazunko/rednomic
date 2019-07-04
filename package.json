@@ -1,6 +1,6 @@
 {
   "name": "rednomic",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Redis based Node.js microservices framework",
   "main": "index.js",
   "directories": {
@@ -28,7 +28,7 @@
   "dependencies": {
     "macaddress": "^0.2.9",
     "moment": "^2.24.0",
-    "nodejs-redis-observer": "^1.0.13",
+    "nodejs-redis-observer": "^1.0.14",
     "redis": "^2.8.0"
   },
   "devDependencies": {
