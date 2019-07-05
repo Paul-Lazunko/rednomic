@@ -1,6 +1,6 @@
 #Rednomic
 
-Rednomic is a framework for developing microservices based systems, the main feature of it is the asynchronous interaction of components through Redis. Data is transmitted as a JSON strings, file streaming from entry point to microservice is implemented throw Redis also.
+Rednomic is a framework for developing microservices based systems, the main feature of it is the asynchronous interaction of components through Redis. Data is transferred as a JSON strings, file streaming from entry point to microservices is implemented throw Redis also.
 
 Clone and test example app:
 
@@ -25,7 +25,7 @@ The following methods and properties are available for calling inside the **serv
 (see below usage examples);
 
 ##UnitGroups
-A unit group is also a separate executable unit that serves as a load balancer and proxy relative to a group of identical units. In Your code it is a instance of RednomicUnitGroup class and requires next options to be provided:
+A unit group is also a separate executable unit that serves as a load balancer and proxy relative to a group of identical units. In Your code it is an instance of RednomicUnitGroup class and requires next options to be provided:
 
 - **redisServer**: an object this host and port properties;
 - **pingTimeout**: positive integer which indicates ping frequency for health checking proxied units;
