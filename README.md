@@ -1,6 +1,13 @@
 #Rednomic
 
-Rednomic is a framework for developing microservices based systems, the main feature of it is the asynchronous interaction of components through Redis. Data is transferred as a JSON strings, file streaming from entry point to microservices is implemented throw Redis also.
+Rednomic is a framework for developing microservices based systems, the main feature of it is the asynchronous interaction of components through Redis.
+
+Rednomic provides the following benefits:
+
+- it is really fast and lightweight
+- fully asynchronous
+- easy setup and use
+- supports file transfer in both directions between the entry point and microservices
 
 Clone and test example app:
 
