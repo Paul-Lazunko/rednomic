@@ -21,6 +21,7 @@ The following methods and properties are available for calling inside the **serv
 - **call**: asynchronous function for interaction with another units, which takes two arguments (unitId and data);
 - **log**: function which write logs, takes two arguments (type - 'info' or error' and data);
 - **files**: holder of binary data passed from API Gateaway;
+- **backStream**: function which pipe some readable stream to entry point, takes two arguments - meta (object with any properties which You need) and stream, this data will be available in req.rednomic.files when next() will be called in the rednomic middleware at the entry point side
 
 (see below usage examples);
 
