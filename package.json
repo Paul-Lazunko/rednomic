@@ -1,6 +1,6 @@
 {
   "name": "rednomic",
-  "version": "3.0.17",
+  "version": "3.0.18",
   "description": "Redis based Node.js microservices framework",
   "main": "index.js",
   "directories": {
