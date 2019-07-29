@@ -55,8 +55,6 @@ You can use next methods of this instance at the entry point side:
 - **getHealthStatuses**: function which return units with its current states;
 - **getLogs**: asynchronous function which returns needed logs, takes 8 arguments (type - 'error' or 'info', unitId, year, month, day, hour, minute, second) non of them are required, time args can be numbers (f.e. - 2019,7,1);
 
-Also You can provide **manage** property for the each of units in the units list, **manage** object should implements **start**, **restart** and **stop** methods. In this case when unit health checking fails provided restart will be called. Also provided methods can be manually called with RednomicServer instance:
-
 ```
 instance.manage(unitid).restart();
 ```
