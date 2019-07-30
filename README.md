@@ -55,10 +55,6 @@ You can use next methods of this instance at the entry point side:
 - **getHealthStatuses**: function which return units with its current states;
 - **getLogs**: asynchronous function which returns needed logs, takes 8 arguments (type - 'error' or 'info', unitId, year, month, day, hour, minute, second) non of them are required, time args can be numbers (f.e. - 2019,7,1);
 
-```
-instance.manage(unitid).restart();
-```
-
 ##Examples
 
 There is a simple example of http-server (which is entry point to Your microservices system) part of code (make sure that Redis server is running, use esm module for supporting es import) in the server.js (or another file):
