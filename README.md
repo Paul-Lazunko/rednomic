@@ -1,5 +1,10 @@
 #Rednomic
 
+****
+##This package is deprecated, use **evodove** instead:
+https://www.npmjs.com/package/evodove
+****
+
 Rednomic is a framework for developing microservices based systems, the main feature of it is the asynchronous interaction of components through Redis.
 
 Rednomic provides the following benefits:
